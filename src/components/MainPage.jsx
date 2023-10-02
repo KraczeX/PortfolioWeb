@@ -4,6 +4,7 @@ import PowerButton from "../subComponents/powerButton";
 import LogoComponent from "../subComponents/logoComponent";
 import SocialIcons from "../subComponents/socialIcons";
 import { NavLink } from "react-router-dom";
+import { YinYang } from "./AllSvgs";
 
 
 const MainContainer = styled.div`
@@ -76,7 +77,26 @@ const Skills = styled(NavLink)`
     z-index: 1;
     
 `
+const Center = styled.button`
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &>:last-child{
+        padding-top: 1rem;
+    }
+
+`
 
 
 const Main = () => {
@@ -86,6 +106,11 @@ const Main = () => {
                 <PowerButton />
                 <LogoComponent />
                 <SocialIcons />
+
+                <Center>
+                    <YinYang width={150} height={150} fill='currentColor'></YinYang>
+                    <span>Click Here</span>
+                </Center>
 
                 <Contact target="_blank" to="https://discord.gg/yJfcEqPvnB">
                     <h2>
