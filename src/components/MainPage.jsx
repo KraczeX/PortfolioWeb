@@ -5,6 +5,8 @@ import LogoComponent from "../subComponents/logoComponent";
 import SocialIcons from "../subComponents/socialIcons";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "./AllSvgs";
+import Intro from "../components/Intro";
+
 
 
 const MainContainer = styled.div`
@@ -178,6 +180,7 @@ const Main = () => {
                 </BottomBar>
 
             </Container>
+            {click ? <Intro clicl={click} /> : null}
         </MainContainer>
     )
 }
