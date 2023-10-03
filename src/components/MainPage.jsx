@@ -6,6 +6,7 @@ import SocialIcons from "../subComponents/socialIcons";
 import { NavLink } from "react-router-dom";
 import { YinYang } from "./AllSvgs";
 import Intro from "../components/Intro";
+import { motion } from "framer-motion";
 
 
 
@@ -147,9 +148,12 @@ const Main = () => {
                 </Center>
 
                 <Contact target="_blank" to="https://discord.gg/yJfcEqPvnB">
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         Send Message
-                    </h2>
+                    </motion.h2>
                 </Contact>
 
                 <Soon to="/">
