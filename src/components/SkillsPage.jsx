@@ -6,6 +6,7 @@ import { Design, Develope } from './AllSvgs';
 import PowerButton from "../subComponents/powerButton";
 import LogoComponent from "../subComponents/logoComponent";
 import SocialIcons from "../subComponents/socialIcons";
+import ParticleComponent from '../subComponents/particleComponent';
 
 const Box = styled.div`
     background-color: ${props => props.theme.body};
@@ -83,34 +84,9 @@ const Skills = () => {
                 <LogoComponent theme='light' />
                 <SocialIcons theme='light' />
                 <PowerButton />
+                <ParticleComponent theme='light'/>
 
-                <Main>
-                    <Title>
-                        <Develope width={40} height={40} /> Bot Developer
-                    </Title>
-                    <Description>
-                        I love to create designs that speak, keeping them clean, minimal, and simple.
-                    </Description>
-                    <Description>
-                        <strong>I like to Design</strong>
-                        <ul>
-                            <li>
-                                Web Design
-                            </li>
-                            <li>
-                                Mobile Apps
-                            </li>
-                        </ul>
-                    </Description>
-                    <Description>
-                        <strong>Tools</strong>
-                        <ul>
-                            <li>
-                                Figma
-                            </li>
-                        </ul>
-                    </Description>
-                </Main>
+                {/* Komponent dla Frontend Developera */}
                 <Main>
                     <Title>
                         <Design width={40} height={40} /> Frontend Developer
@@ -121,13 +97,35 @@ const Skills = () => {
                     <Description>
                         <strong>Skills</strong>
                         <p>
-                            Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
+                            Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind.
                         </p>
                     </Description>
                     <Description>
                         <strong>Tools</strong>
                         <p>
-                            VScode, Github, Codepen etc.
+                            VScode, Github, Webstorm, Figma.
+                        </p>
+                    </Description>
+                </Main>
+
+                {/* Komponent dla Bot Developera */}
+                <Main>
+                    <Title>
+                        <Develope width={40} height={40} /> Bot Developer
+                    </Title>
+                    <Description>
+                        I specialize in creating powerful and efficient bots using Discord.js to enhance user experiences and automate tasks.
+                    </Description>
+                    <Description>
+                        <strong>Skills</strong>
+                        <p>
+                            Discord.js, Node.js, Chatbots, API Integration, Bot Frameworks.
+                        </p>
+                    </Description>
+                    <Description>
+                        <strong>Tools</strong>
+                        <p>
+                            VScode, Github, Discord Developer Portal.
                         </p>
                     </Description>
                 </Main>
@@ -135,5 +133,6 @@ const Skills = () => {
         </ThemeProvider>
     );
 };
+
 
 export default Skills;
