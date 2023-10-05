@@ -13,8 +13,7 @@ import Card from "../subComponents/Card";
 
 const Box = styled.div`
     background-color: ${props => props.theme.body};
-    width: 100vw;
-    height: 100vh;
+    height: 400vh;
     position: relative;
     overflow: hidden;
 
@@ -31,6 +30,8 @@ const Main = styled.ul`
 
 
 const WorkPage = () => {
+
+
     return (
         <ThemeProvider theme={darkTheme}>
             <Box>
